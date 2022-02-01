@@ -2,7 +2,7 @@ import React from "react";
 import { Fragment } from "react/cjs/react.production.min";
 import { useFetchGifs } from "../hooks/useFetchGif";
  import { GifGridItem } from "./GifGridItem";
-
+import PropTypes from 'prop-types';
 export const GrifGrid = ({ category }) => {
   
     const {data:images,loading}= useFetchGifs( category );
@@ -27,3 +27,6 @@ export const GrifGrid = ({ category }) => {
     </Fragment>
   );
 };
+GrifGrid.propTypes={
+  category:PropTypes.string.isRequired
+}

@@ -4,10 +4,10 @@ import React,{ useState } from 'react'
 import {AddCategory} from './components/AddCategory'
 import { GrifGrid } from './components/GrifGrid'
 //snipet para la creacion rapida de componente "rafc"
-export const GifExpertApp = () => {
+export const GifExpertApp = ( { defautlCategories= [] } ) => {
     // const categories=
     
-    const [categories, setCategories] = useState(['One Punch'])
+    const [categories, setCategories] = useState( defautlCategories )
    
     // const handleAdd=()=>{
     //     // setCategories([...categories,'Hunter Hunter'])
